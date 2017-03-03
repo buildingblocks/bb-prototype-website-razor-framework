@@ -3,6 +3,21 @@
   "version": 2,
   "targets": {
     ".NETCoreApp,Version=v1.1": {
+      "dotnet-bump/1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.DotNet.ProjectModel": "1.0.0-rc3-003121",
+          "Microsoft.NETCore.App": "1.0.0",
+          "Newtonsoft.Json": "9.0.1",
+          "NuGet.Client": "3.5.0-rc1-final"
+        },
+        "compile": {
+          "lib/netcoreapp1.0/dotnet-bump.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp1.0/dotnet-bump.dll": {}
+        }
+      },
       "Libuv/1.9.1": {
         "type": "package",
         "dependencies": {
@@ -872,6 +887,29 @@
           "lib/netstandard1.3/Microsoft.DotNet.PlatformAbstractions.dll": {}
         }
       },
+      "Microsoft.DotNet.ProjectModel/1.0.0-rc3-003121": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CSharp": "4.0.1",
+          "Microsoft.Extensions.DependencyModel": "1.0.0",
+          "Newtonsoft.Json": "9.0.1",
+          "NuGet.Packaging": "3.5.0-beta2-1484",
+          "NuGet.RuntimeModel": "3.5.0-beta2-1484",
+          "System.Dynamic.Runtime": "4.0.11",
+          "System.Reflection.Metadata": "1.3.0",
+          "System.Runtime.Loader": "4.0.0",
+          "System.Runtime.Serialization.Primitives": "4.1.1",
+          "System.Security.Cryptography.Algorithms": "4.2.0",
+          "System.Threading.Thread": "4.0.0",
+          "System.Xml.XDocument": "4.0.11"
+        },
+        "compile": {
+          "lib/netstandard1.6/Microsoft.DotNet.ProjectModel.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.6/Microsoft.DotNet.ProjectModel.dll": {}
+        }
+      },
       "Microsoft.Extensions.Caching.Abstractions/1.1.0": {
         "type": "package",
         "dependencies": {
@@ -1499,6 +1537,149 @@
         },
         "runtime": {
           "lib/netstandard1.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "NuGet.Client/3.5.0-rc1-final": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0",
+          "NuGet.ContentModel": "3.5.0-rc1-final",
+          "NuGet.Packaging": "3.5.0-rc1-final",
+          "NuGet.Repositories": "3.5.0-rc1-final",
+          "NuGet.RuntimeModel": "3.5.0-rc1-final",
+          "NuGet.Versioning": "3.5.0-rc1-final"
+        },
+        "compile": {
+          "lib/netstandard1.3/NuGet.Client.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/NuGet.Client.dll": {}
+        }
+      },
+      "NuGet.Common/3.5.0-rc1-final": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0",
+          "System.Diagnostics.Process": "4.1.0",
+          "System.Security.Cryptography.Algorithms": "4.2.0",
+          "System.Threading.Thread": "4.0.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/NuGet.Common.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/NuGet.Common.dll": {}
+        }
+      },
+      "NuGet.ContentModel/3.5.0-rc1-final": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0",
+          "System.ObjectModel": "4.0.12"
+        },
+        "compile": {
+          "lib/netstandard1.3/NuGet.ContentModel.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/NuGet.ContentModel.dll": {}
+        }
+      },
+      "NuGet.Frameworks/3.5.0-rc1-final": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/NuGet.Frameworks.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/NuGet.Frameworks.dll": {}
+        }
+      },
+      "NuGet.Packaging/3.5.0-rc1-final": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0",
+          "NuGet.Common": "3.5.0-rc1-final",
+          "NuGet.Packaging.Core": "3.5.0-rc1-final",
+          "System.IO.Compression": "4.1.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/NuGet.Packaging.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/NuGet.Packaging.dll": {}
+        }
+      },
+      "NuGet.Packaging.Core/3.5.0-rc1-final": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0",
+          "NuGet.Common": "3.5.0-rc1-final",
+          "NuGet.Packaging.Core.Types": "3.5.0-rc1-final",
+          "System.Xml.XDocument": "4.0.11"
+        },
+        "compile": {
+          "lib/netstandard1.3/NuGet.Packaging.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/NuGet.Packaging.Core.dll": {}
+        }
+      },
+      "NuGet.Packaging.Core.Types/3.5.0-rc1-final": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0",
+          "NuGet.Frameworks": "3.5.0-rc1-final",
+          "NuGet.Versioning": "3.5.0-rc1-final"
+        },
+        "compile": {
+          "lib/netstandard1.3/NuGet.Packaging.Core.Types.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/NuGet.Packaging.Core.Types.dll": {}
+        }
+      },
+      "NuGet.Repositories/3.5.0-rc1-final": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0",
+          "NuGet.Packaging": "3.5.0-rc1-final"
+        },
+        "compile": {
+          "lib/netstandard1.3/NuGet.Repositories.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/NuGet.Repositories.dll": {}
+        }
+      },
+      "NuGet.RuntimeModel/3.5.0-rc1-final": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0",
+          "Newtonsoft.Json": "9.0.1",
+          "NuGet.Frameworks": "3.5.0-rc1-final",
+          "NuGet.Versioning": "3.5.0-rc1-final",
+          "System.Dynamic.Runtime": "4.0.11",
+          "System.ObjectModel": "4.0.12"
+        },
+        "compile": {
+          "lib/netstandard1.3/NuGet.RuntimeModel.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/NuGet.RuntimeModel.dll": {}
+        }
+      },
+      "NuGet.Versioning/3.5.0-rc1-final": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0"
+        },
+        "compile": {
+          "lib/netstandard1.0/NuGet.Versioning.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/NuGet.Versioning.dll": {}
         }
       },
       "OctoPack/3.5.1": {
@@ -3585,6 +3766,17 @@
     }
   },
   "libraries": {
+    "dotnet-bump/1.0.1": {
+      "sha512": "TjuSp917vlf1Yt7aOalthUpM4tzHrpUxbHWuAXAYK3AZUG35Cvi/nkshX+xa8hkJ2ab/qIpGpn5UtAlsnJF9SQ==",
+      "type": "package",
+      "path": "dotnet-bump/1.0.1",
+      "files": [
+        "dotnet-bump.1.0.1.nupkg.sha512",
+        "dotnet-bump.nuspec",
+        "lib/netcoreapp1.0/dotnet-bump.dll",
+        "lib/netcoreapp1.0/dotnet-bump.runtimeconfig.json"
+      ]
+    },
     "Libuv/1.9.1": {
       "sha512": "uqX2Frwf9PW8MaY7PRNY6HM5BpW1D8oj1EdqzrmbEFD5nH63Yat3aEjN/tws6Tw6Fk7LwmLBvtUh32tTeTaHiA==",
       "type": "package",
@@ -4283,6 +4475,17 @@
         "lib/netstandard1.3/Microsoft.DotNet.PlatformAbstractions.dll"
       ]
     },
+    "Microsoft.DotNet.ProjectModel/1.0.0-rc3-003121": {
+      "sha512": "wnWw5KsKinG2wWxdoQIJXZlMFvPNhL7WmIyW9q6xrZFUi/uld5PC3ksq2QDZepF148FUjCIyTP+TnRwU3RJqUg==",
+      "type": "package",
+      "path": "Microsoft.DotNet.ProjectModel/1.0.0-rc3-003121",
+      "files": [
+        "Microsoft.DotNet.ProjectModel.1.0.0-rc3-003121.nupkg.sha512",
+        "Microsoft.DotNet.ProjectModel.nuspec",
+        "lib/net451/Microsoft.DotNet.ProjectModel.dll",
+        "lib/netstandard1.6/Microsoft.DotNet.ProjectModel.dll"
+      ]
+    },
     "Microsoft.Extensions.Caching.Abstractions/1.1.0": {
       "sha512": "uMbUDz/lNoO9LGc+DSjKMLWJk+y4qX6syDRcmQC0w6LSQzizkRqmo5Y8jO0ePtZRjF2lSGgO5URt4YgB6STDBQ==",
       "type": "package",
@@ -4869,6 +5072,138 @@
         "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll",
         "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.xml",
         "tools/install.ps1"
+      ]
+    },
+    "NuGet.Client/3.5.0-rc1-final": {
+      "sha512": "cTHlxKKzjToroIH4TKLJd5CKTxosrL916KDuAHKZ9MD6fgGwR7tl0ecsvFDXHEPVG14NzLPGjBEwIzF+nmS8qA==",
+      "type": "package",
+      "path": "NuGet.Client/3.5.0-rc1-final",
+      "files": [
+        "NuGet.Client.3.5.0-rc1-final.nupkg.sha512",
+        "NuGet.Client.nuspec",
+        "lib/net45/NuGet.Client.dll",
+        "lib/net45/NuGet.Client.xml",
+        "lib/netstandard1.3/NuGet.Client.dll",
+        "lib/netstandard1.3/NuGet.Client.xml"
+      ]
+    },
+    "NuGet.Common/3.5.0-rc1-final": {
+      "sha512": "anbzgB3RXXSDZkiosmvWr0msjTAAZX1LRnb1jQEegtFiM3gcoCYPaqsg0/8CBMzS7SedLV0F1SNe7rfXNM6zdg==",
+      "type": "package",
+      "path": "NuGet.Common/3.5.0-rc1-final",
+      "files": [
+        "NuGet.Common.3.5.0-rc1-final.nupkg.sha512",
+        "NuGet.Common.nuspec",
+        "lib/net45/NuGet.Common.dll",
+        "lib/net45/NuGet.Common.xml",
+        "lib/netstandard1.3/NuGet.Common.dll",
+        "lib/netstandard1.3/NuGet.Common.xml"
+      ]
+    },
+    "NuGet.ContentModel/3.5.0-rc1-final": {
+      "sha512": "Ng3zr4CIBbNRJRcV3G2vbbIFCVleFn80Fiw+eSUHjKGKt5euKZnqQC+gBh9cDSGKOm58Ky7V+vN3wbsVZ1gSXw==",
+      "type": "package",
+      "path": "NuGet.ContentModel/3.5.0-rc1-final",
+      "files": [
+        "NuGet.ContentModel.3.5.0-rc1-final.nupkg.sha512",
+        "NuGet.ContentModel.nuspec",
+        "lib/net45/NuGet.ContentModel.dll",
+        "lib/net45/NuGet.ContentModel.xml",
+        "lib/netstandard1.3/NuGet.ContentModel.dll",
+        "lib/netstandard1.3/NuGet.ContentModel.xml"
+      ]
+    },
+    "NuGet.Frameworks/3.5.0-rc1-final": {
+      "sha512": "T1VjMtBhBUqIdhpYcwkhMcS0XqueVPgiuqaJxOU0SpMuwLgeahYOL/yqkTpWQqGhN8iZECMrnRaQsSiARQSi9g==",
+      "type": "package",
+      "path": "NuGet.Frameworks/3.5.0-rc1-final",
+      "files": [
+        "NuGet.Frameworks.3.5.0-rc1-final.nupkg.sha512",
+        "NuGet.Frameworks.nuspec",
+        "lib/net40-client/NuGet.Frameworks.dll",
+        "lib/net40-client/NuGet.Frameworks.xml",
+        "lib/net45/NuGet.Frameworks.dll",
+        "lib/net45/NuGet.Frameworks.xml",
+        "lib/netstandard1.3/NuGet.Frameworks.dll",
+        "lib/netstandard1.3/NuGet.Frameworks.xml"
+      ]
+    },
+    "NuGet.Packaging/3.5.0-rc1-final": {
+      "sha512": "TBQ8MYUAbgcCxLACVVLf6ilrOFsRa6j/4qDMhjfrF97e0CNhBbOq9E5X/dxXrxR2DbLilroc+CNvaAVErvAS5g==",
+      "type": "package",
+      "path": "NuGet.Packaging/3.5.0-rc1-final",
+      "files": [
+        "NuGet.Packaging.3.5.0-rc1-final.nupkg.sha512",
+        "NuGet.Packaging.nuspec",
+        "lib/net45/NuGet.Packaging.dll",
+        "lib/net45/NuGet.Packaging.xml",
+        "lib/netstandard1.3/NuGet.Packaging.dll",
+        "lib/netstandard1.3/NuGet.Packaging.xml"
+      ]
+    },
+    "NuGet.Packaging.Core/3.5.0-rc1-final": {
+      "sha512": "aJJ3kzwcWV/iBk2E1mDBFpqlgYpKBhzbaO8mToqcAW6l6gUd4nK69FQEqX7qq5VnvsTCK1ejEMt0xHl60USq4g==",
+      "type": "package",
+      "path": "NuGet.Packaging.Core/3.5.0-rc1-final",
+      "files": [
+        "NuGet.Packaging.Core.3.5.0-rc1-final.nupkg.sha512",
+        "NuGet.Packaging.Core.nuspec",
+        "lib/net45/NuGet.Packaging.Core.dll",
+        "lib/net45/NuGet.Packaging.Core.xml",
+        "lib/netstandard1.3/NuGet.Packaging.Core.dll",
+        "lib/netstandard1.3/NuGet.Packaging.Core.xml"
+      ]
+    },
+    "NuGet.Packaging.Core.Types/3.5.0-rc1-final": {
+      "sha512": "dTsYfReu0sZy0+Fwly+aqFQsGUHQ/zZyIpNjydxswET7NpFAM/3AsXmDLMYBPLot48OCSQxKzf+D3NLTroYd1w==",
+      "type": "package",
+      "path": "NuGet.Packaging.Core.Types/3.5.0-rc1-final",
+      "files": [
+        "NuGet.Packaging.Core.Types.3.5.0-rc1-final.nupkg.sha512",
+        "NuGet.Packaging.Core.Types.nuspec",
+        "lib/net45/NuGet.Packaging.Core.Types.dll",
+        "lib/net45/NuGet.Packaging.Core.Types.xml",
+        "lib/netstandard1.3/NuGet.Packaging.Core.Types.dll",
+        "lib/netstandard1.3/NuGet.Packaging.Core.Types.xml"
+      ]
+    },
+    "NuGet.Repositories/3.5.0-rc1-final": {
+      "sha512": "PbkYkvO1aR+vm/RiFmh0qoNUTXSDen3ETodh/jWxN2IFGVuHW+fK9lEvCz57wUJhQo5xiyn+FYRT8fJ+njVLHA==",
+      "type": "package",
+      "path": "NuGet.Repositories/3.5.0-rc1-final",
+      "files": [
+        "NuGet.Repositories.3.5.0-rc1-final.nupkg.sha512",
+        "NuGet.Repositories.nuspec",
+        "lib/net45/NuGet.Repositories.dll",
+        "lib/net45/NuGet.Repositories.xml",
+        "lib/netstandard1.3/NuGet.Repositories.dll",
+        "lib/netstandard1.3/NuGet.Repositories.xml"
+      ]
+    },
+    "NuGet.RuntimeModel/3.5.0-rc1-final": {
+      "sha512": "OMjEpb1/s2VmmwKDCIcO1i4fA9bGJvCp7EmCwM95ZFTmfHVKWiVWFgO95fcOkp/9Uw+oWLT/F3YIWV9BZ2LQ8Q==",
+      "type": "package",
+      "path": "NuGet.RuntimeModel/3.5.0-rc1-final",
+      "files": [
+        "NuGet.RuntimeModel.3.5.0-rc1-final.nupkg.sha512",
+        "NuGet.RuntimeModel.nuspec",
+        "lib/net45/NuGet.RuntimeModel.dll",
+        "lib/net45/NuGet.RuntimeModel.xml",
+        "lib/netstandard1.3/NuGet.RuntimeModel.dll",
+        "lib/netstandard1.3/NuGet.RuntimeModel.xml"
+      ]
+    },
+    "NuGet.Versioning/3.5.0-rc1-final": {
+      "sha512": "Xo75gAqzI83opGrlFQYq4XK2Ee61b8vFh4orO82EgIUfQ09YyoVA9JIV7A4BdUz5NMogEINpnR1X/2IjS/5lAw==",
+      "type": "package",
+      "path": "NuGet.Versioning/3.5.0-rc1-final",
+      "files": [
+        "NuGet.Versioning.3.5.0-rc1-final.nupkg.sha512",
+        "NuGet.Versioning.nuspec",
+        "lib/net45/NuGet.Versioning.dll",
+        "lib/net45/NuGet.Versioning.xml",
+        "lib/netstandard1.0/NuGet.Versioning.dll",
+        "lib/netstandard1.0/NuGet.Versioning.xml"
       ]
     },
     "OctoPack/3.5.1": {
@@ -9674,10 +10009,33 @@
       "Microsoft.Extensions.Configuration.Json >= 1.1.0",
       "Microsoft.Extensions.Logging.Console >= 1.1.0",
       "Microsoft.NETCore.App >= 1.1.0",
-      "OctoPack >= 3.5.1"
+      "OctoPack >= 3.5.1",
+      "dotnet-bump >= 1.0.1"
     ],
     ".NETCoreApp,Version=v1.1": []
   },
-  "tools": {},
-  "projectFileToolGroups": {}
+  "tools": {
+    ".NETCoreApp,Version=v1.0": {
+      "dotnet-bump/1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.DotNet.ProjectModel": "1.0.0-rc3-003121",
+          "Microsoft.NETCore.App": "1.0.0",
+          "Newtonsoft.Json": "9.0.1",
+          "NuGet.Client": "3.5.0-rc1-final"
+        },
+        "compile": {
+          "lib/netcoreapp1.0/dotnet-bump.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp1.0/dotnet-bump.dll": {}
+        }
+      }
+    }
+  },
+  "projectFileToolGroups": {
+    ".NETCoreApp,Version=v1.0": [
+      "dotnet-bump >= 1.0.1"
+    ]
+  }
 }
